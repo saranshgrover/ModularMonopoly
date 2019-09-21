@@ -1,0 +1,27 @@
+.InformationBoard {
+    position: fixed;
+    right: 0;
+    top: 20%;
+}
+
+.information_board_player {
+    width: 300px;
+    height: 100px;
+    background: white;
+    padding: 5px;
+    text-align: center;
+    font-size: 2.2em;
+}
+
+.InformationBoard-PieceName {
+    font-size: 1em;
+    color: grey;
+}
+
+.InformationBoard-dieRoll {
+    text-align: center;
+    color: blue;
+    background: white;
+    padding-bottom: 10px;
+}
+

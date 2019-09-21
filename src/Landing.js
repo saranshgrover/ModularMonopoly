@@ -87,7 +87,7 @@ class Landing extends Component {
                         <div className="User1">
                             <label>
                                 User 1 Nickname:
-                                <input type="text" value={this.state.Name1} onChange={this.handleChange} name="name1"></input>
+                                <input type="text" value={this.state.Name1} onChange={this.handleChange} name="name1" maxLength="14"></input>
                             </label>
                             <label>
                                 User 1 Piece/Color:
@@ -102,7 +102,7 @@ class Landing extends Component {
                         <div className="User2">
                             <label>
                                 User 2 Nickname:
-                                <input type="text" value={this.state.Name2} onChange={this.handleChange} name="name2"></input>
+                                <input type="text" value={this.state.Name2} onChange={this.handleChange} name="name2" maxLength="14"></input>
                             </label>
                             <label>
                                 User 2 Piece/Color:
@@ -117,7 +117,7 @@ class Landing extends Component {
                         <div className="User3">
                             <label>
                                 User 3 Nickname:
-                                <input type="text" value={this.state.Name3} onChange={this.handleChange} name="name3"></input>
+                                <input type="text" value={this.state.Name3} onChange={this.handleChange} name="name3" maxLength="14"></input>
                             </label>
                             <label>
                                 User 3 Piece/Color:
@@ -132,7 +132,7 @@ class Landing extends Component {
                         <div className="User4">
                             <label>
                                 User 4 Nickname:
-                                <input type="text" value={this.state.Name4} onChange={this.handleChange} name="name4"></input>
+                                <input type="text" value={this.state.Name4} onChange={this.handleChange} name="name4" maxLength="14"></input>
                             </label>
                             <label>
                                 User 4 Piece/Color:

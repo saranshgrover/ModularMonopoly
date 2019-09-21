@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import ReactDice from 'react-dice-complete'
 import 'react-dice-complete/dist/react-dice-complete.css'
-import './css/InformationBoard.scss';
+import './css/InformationBoard.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPuzzlePiece, faHotel, faHouseDamage } from '@fortawesome/free-solid-svg-icons'
 class InformationBoard extends Component {
@@ -13,21 +13,23 @@ class InformationBoard extends Component {
 
     render() {
         let userObjects = this.props.userObjects;
+        console.log(userObjects);
         const items = []
         for(const [index,value] of userObjects.entries()) {
             items.push(
             <div className="information_board_player">
                 <div className="player_name">
-                    {value.getName()}
-                    <FontAwesomeIcon icon={faPuzzlePiece}/>
-                    {value.getPieceName()}
+                    {value.getName()} <span> </span> <br></br>
+                    <span><FontAwesomeIcon icon={faPuzzlePiece}/> </span>
+                    <span class="InformationBoard-PieceName">{value.getPieceName()}</span>
                 </div>
                 <div className="player_bank">
-                    {value.getBalance()}
+                    <span>{value.getBalance()} </span>
                     <FontAwesomeIcon icon={faHouseDamage}/>
-                    {value.getHouseCount()}
+                    <span> {value.getHouseCount()} </span>
                     <FontAwesomeIcon icon={faHotel}/>
-                    {value.getHotelCount()}
+                    <span> {value.getHotelCount()}</span>
+                    <hr></hr>
                 </div>
                 <div className="player_position">
 
@@ -39,13 +41,16 @@ class InformationBoard extends Component {
                 <div className="flex-container">
                     {items}
                 </div>
-                <div className="dieRoll">
+                <div className="InformationBoard-dieRoll">
+                    <h2>{`${this.props.currentPlayer.getName()}'s turn!`}</h2>
                     <ReactDice
                     numDice={2}
                     rollDone={this.rollDoneCallback}
                     ref={dice => this.reactDice = dice}
+                    faceColor="#000000"
+                    dotColor="#ffffff"
                     />
-                    <button onClick={this.rollAll} disabled={this.props.currentPlayer.hasRolled()}>Roll</button>
+                    <button onClick={this.rollAll} disabled={this.props.currentPlayer.hasRolled}>Roll</button>
                 </div>
             </div>
         );

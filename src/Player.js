@@ -39,10 +39,6 @@ export default class Player {
         return this.pieceName;
     }
 
-    getCurrentPosition() {
-        return this.currentPosition;
-    }
-
     hasRolled() {
         return this.hasRolled;
     }
