@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import "./css/CornerTile.css"
+import "./css/CornerTile.scss"
 
 class CornerTile extends Component {
     constructor(props) {

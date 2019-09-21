@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './css/HouseTile.css';
+import './css/HouseTile.scss';
 
 class HouseTile extends Component {
     constructor(props) {

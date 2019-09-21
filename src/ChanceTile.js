@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './css/ChanceTile.scss'
 
 class ChanceTile extends React.Component {
     constructor(props) {

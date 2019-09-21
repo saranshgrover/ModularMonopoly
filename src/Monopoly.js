@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Monopoly.css';
+import './Monopoly.scss';
 import GameBoard from './GameBoard';
 
 class Monopoly extends Comment {

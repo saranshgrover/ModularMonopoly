@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './css/UtilityTile.css';
+import './css/UtilityTile.scss';
 
 class UtilityTile extends Component {
     constructor(props) {

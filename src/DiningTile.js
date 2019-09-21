@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import "./css/DiningTile.css"
+import "./css/DiningTile.scss"
 
 class DiningTile extends Component {
     constructor(props) {

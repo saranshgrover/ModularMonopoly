@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import './css/TaxTile.scss';
 
 class TaxTile extends React.Component {
     constructor(props) {
