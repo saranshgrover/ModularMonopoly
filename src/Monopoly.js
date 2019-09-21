@@ -66,7 +66,7 @@ class Monopoly extends Component {
         //     userObjects: users
         // }));
         console.log(this.state.currentPlayerTurn);
-        console.log(this.state.userObjects[0]);
+        console.log(this.state.userObjects[0]);*/
     }
     executeTurn(indexOfPlayer) {
         
@@ -77,7 +77,7 @@ class Monopoly extends Component {
                 {this.state.readyToPlay == false 
                 ? <Redirect to='/' /> 
                 : <div>
-                    <GameBoard userObjects={this.state.userObjects} />
+                    <GameBoard currentPlayer={this.state.currentPlayerTurn} />
                     <InformationBoard userObjects={this.state.userObjects} rollDice={this.rollDice} currentPlayer={this.state.currentPlayerTurn} />
                   </div> }
             </div>

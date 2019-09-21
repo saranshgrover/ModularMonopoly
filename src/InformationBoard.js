@@ -49,6 +49,7 @@ class InformationBoard extends Component {
                     ref={dice => this.reactDice = dice}
                     faceColor="#000000"
                     dotColor="#ffffff"
+                    disableIndividual={true}
                     />
                     <button onClick={this.rollAll} disabled={this.props.currentPlayer.hasRolled}>Roll</button>
                 </div>
