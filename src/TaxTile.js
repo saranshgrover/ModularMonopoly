@@ -8,18 +8,20 @@ class TaxTile extends React.Component {
 
     render() {
         // Reference all props by doing: this.props.(prop name here). Assume props are accessable 
-        let nameOfProperty = this.props.nameOfProperty;
+        let propertyName = this.props.propertyName;
+        let spaceClass = "space";
+        if(propertyName="Income Tax")
+            spaceClass += " income-tax";
+        else
+            spaceClass += " luxary-tax";
         return (
             <div className="TaxTile">
-                {/* Put html here */}
-                <div className="TaxTileName">
-                    <p>{this.props.propertyName}</p>
-                </div>
-                <div className="TaxTilePicture">
-                    <image src={this.props.imgSrc}></image>
-                </div>
-                <div className="TaxTileFooter">
-                    <p>{this.props.footerPrice}</p>
+                <div class={spaceClass}>
+                    <div class="container">
+                        <div class="name">{this.props.propertyName}</div>
+                        <div class="drawing fa fa-diamond"></div>
+                        <div class="instructions">{this.props.footerPrice}</div>
+                    </div>
                 </div>
             </div>
         );

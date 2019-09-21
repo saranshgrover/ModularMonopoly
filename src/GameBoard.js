@@ -42,7 +42,7 @@ class GameBoard extends Component {
                     <ChanceTile propertyName="Chance" tileId={7}/>
                     <HouseTile propertyName="Harriman Hall" tileId={6} colorGroup="light-blue" />
                     <DiningTile propertyName="East Side Dining" tileId={5} />
-                    <TaxTile propertyName="Housing Fee" tileId={4} />
+                    <TaxTile propertyName="Housing Fee" tileId={4} footerPrice="$500" />
                     <HouseTile propertyName="Javits Center" tileId={3} colorGroup="brown" />
                     <ChanceTile propertyName="Community Chest" tileId={2}/>
                     <HouseTile propertyName="Earth & Space Sciences" tileId={1} colorGroup="brown" />
@@ -58,7 +58,7 @@ class GameBoard extends Component {
                         <DiningTile propertyName="West Side Dining" tileId={15} />
                         <HouseTile propertyName="James College" tileId={14} colorGroup={Color.Pink} />
                         <HouseTile propertyName="Langmuir College" tileId={13} colorGroup={Color.Pink} />
-                        <UtilityTile propertyName="Housing Fee" tileId={12}/>
+                        <UtilityTile propertyName="Utility Name?" tileId={12}/>
                         <HouseTile propertyName="Benedict College" tileId={11} colorGroup={Color.Pink} />
                     </div>
                     <div className="space corner free-parking">

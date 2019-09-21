@@ -9,9 +9,13 @@ class UtilityTile extends Component {
     render() {
         return (
             <div className="UtilityTile">
-                <p className="UtilityTileName">{this.props.propertyName}</p>
-                <img className="UtilityTileImage" src={this.props.imgSrc} alt={this.props.propertyName}></img>
-                <p className="UtilityTileFooter">{this.props.footerPrice}</p>
+                <div class="space utility electric-company">
+                    <div class="container">
+                        <div class="name">{this.props.propertyName}</div>
+                        <i class="drawing fa fa-lightbulb-o"></i>
+                        <div class="price">Price: {this.props.footerPrice}</div>
+                    </div>
+			    </div>
             </div>
         );
     }
