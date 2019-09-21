@@ -3,6 +3,7 @@ import GameBoard from './GameBoard';
 import Player from './Player.js';
 import { Redirect } from 'react-router-dom';
 import InformationBoard from './InformationBoard';
+import './css/Monopoly.scss';
 
 class Monopoly extends Component {
     constructor(props) {
