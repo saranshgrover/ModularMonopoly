@@ -16,8 +16,9 @@ class InformationBoard extends Component {
         console.log(userObjects);
         const items = []
         for(const [index,value] of userObjects.entries()) {
+            let bgStyle = {backgroundColor: value.getPieceName()};
             items.push(
-            <div className="information_board_player">
+            <div className="information_board_player" style={bgStyle}>
                 <div className="player_name">
                     {value.getName()} <span> </span> <br></br>
                     <span><FontAwesomeIcon icon={faPuzzlePiece}/> </span>

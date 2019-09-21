@@ -92,9 +92,9 @@ class Landing extends Component {
                             <label>
                                 User 1 Piece/Color:
                                 <select name="piece1" size="4" value={this.state.Piece1} onChange={this.handleChange}>
-                                <option value="red">rosybrown</option>
-                                    <option value="blue">lightblue</option>
-                                    <option value="green">lightgreen</option>
+                                    <option value="lavendar">lavendar</option>
+                                    <option value="aqua">aqua</option>
+                                    <option value="lightgreen">lightgreen</option>
                                     <option value="pink ">pink</option>
                                 </select>
                             </label>
@@ -107,9 +107,9 @@ class Landing extends Component {
                             <label>
                                 User 2 Piece/Color:
                                 <select name="piece2" size="4" value={this.state.Piece2} onChange={this.handleChange}>
-                                <option value="red">rosybrown</option>
-                                    <option value="blue">lightblue</option>
-                                    <option value="green">lightgreen</option>
+                                <option value="lavendar">lavendar</option>
+                                    <option value="aqua">aqua</option>
+                                    <option value="lightgreen">lightgreen</option>
                                     <option value="pink ">pink</option>
                                 </select>
                             </label>
@@ -122,9 +122,9 @@ class Landing extends Component {
                             <label>
                                 User 3 Piece/Color:
                                 <select name="piece3" size="4" value={this.state.Piece3} onChange={this.handleChange}>
-                                <option value="red">rosybrown</option>
-                                    <option value="blue">lightblue</option>
-                                    <option value="green">lightgreen</option>
+                                <option value="lavendar">lavendar</option>
+                                    <option value="aqua">aqua</option>
+                                    <option value="lightgreen">lightgreen</option>
                                     <option value="pink ">pink</option>
                                 </select>
                             </label>
@@ -137,9 +137,9 @@ class Landing extends Component {
                             <label>
                                 User 4 Piece/Color:
                                 <select name="piece4" size="4" value={this.state.Piece4} onChange={this.handleChange}>
-                                <option value="red">rosybrown</option>
-                                    <option value="blue">lightblue</option>
-                                    <option value="green">lightgreen</option>
+                                <option value="lavendar">lavendar</option>
+                                    <option value="aqua">aqua</option>
+                                    <option value="lightgreen">lightgreen</option>
                                     <option value="pink ">pink</option>
                                 </select>
                             </label>
