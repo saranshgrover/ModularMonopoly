@@ -9,9 +9,9 @@ class HouseTile extends Component {
     render() {
         return (
             <div className="HouseTile">
-                <p>{this.props.propertyName}</p>
-                <img src={this.props.imgSrc} alt={this.props.propertyName}></img>
-                <p>{this.props.footerPrice}</p>
+                <p className="HouseTileName">{this.props.propertyName}</p>
+                <img className="HouseTileImage" src={this.props.imgSrc} alt={this.props.propertyName}></img>
+                <p className="HouseTileFooter">{this.props.footerPrice}</p>
             </div>
         );
     };
