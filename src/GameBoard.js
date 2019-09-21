@@ -10,6 +10,7 @@ import TaxTile from "./TaxTile.js";
 import Color from "./Constants.js";
 import DiningTile from "./DiningTile";
 import UtilityTile from "./UtilityTile";
+import CardPopUp from "./CardPopUp.js";
 
 
 
@@ -19,6 +20,9 @@ class GameBoard extends Component {
     }
 
     render() {
+        let currentPlayer = this.props.currentPlayer;
+        let player_pos = currentPlayer.getCurrentPosition();
+        let player_color = currentPlayer.getPieceName();
         return(
             <div class="table">
                 <div className="board">

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import GameBoard from './GameBoard';
 import {Redirect} from 'react-router-dom';
 import Player from './Player.js';
+import CardPopUp from "./CardPopUp.js";
 
 class Landing extends Component {
     constructor(props) {
@@ -74,6 +75,7 @@ class Landing extends Component {
         return (
 
             <div className="Landing">
+            <CardPopUp Name="Javits" color="red" id="1" BuildingPrices={[0, 2, 10, 30, 90, 160, 250, 60, 50]}/>
                 {this.state.readyToRedirect &&  <Redirect to = {{
             pathname: '/play',
             state: {numPlayers: this.state.NumPlayers, userObjects: this.state.UserObjects}

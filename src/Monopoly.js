@@ -45,9 +45,19 @@ class Monopoly extends Component {
         console.log(this.state.userObjects[nextPlayerIndex]);
         this.setState({currentPlayerTurn: this.state.userObjects[nextPlayerIndex]});
     }
-
+    refreshPlayerLocation(index) {
+        console.log("Refreshing Location of Player");
+    }
     rollDice(amountRolled) {
-        console.log("Amount rolled: " + amountRolled);
+        let currentPlayerTurn = this.state.currentPlayerTurn;
+        let indexOfPlayer = this.state.userObjects.indexOf(currentPlayerTurn);
+        var stateCopy = Object.assign({},this.state);
+        let newPos = currentPlayerTurn.getCurrentPosition() + amountRolled;
+        stateCopy.userObjects[indexOfPlayer].setCurrentPosition(newPos);
+        this.setState(stateCopy);
+        console.log(this.state.userObjects);
+        this.doTurn(indexOfPlayer);
+        /*console.log("Amount rolled: " + amountRolled);
         console.log(this.state.currentPlayerTurn);
         let currentPlayerTurn = this.state.currentPlayerTurn;
         let indexOfPlayer = this.state.userObjects.indexOf(currentPlayerTurn);
@@ -61,7 +71,7 @@ class Monopoly extends Component {
             userObjects: users
         }));
         console.log(this.state.currentPlayerTurn);
-        console.log(this.state.userObjects[0]);
+        console.log(this.state.userObjects[0]);*/
     }
 
     render() {
@@ -70,7 +80,7 @@ class Monopoly extends Component {
                 {this.state.readyToPlay == false 
                 ? <Redirect to='/' /> 
                 : <div>
-                    <GameBoard userObjects={this.state.userObjects} />
+                    <GameBoard currentPlayer={this.state.currentPlayerTurn} />
                     <InformationBoard userObjects={this.state.userObjects} rollDice={this.rollDice} currentPlayer={this.state.currentPlayerTurn} />
                   </div> }
             </div>
