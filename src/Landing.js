@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import GameBoard from './GameBoard';
 import {Redirect} from 'react-router-dom';
 import Player from './Player.js';
-import CardPopUp from "./CardPopUp.js";
+import './css/Landing.css'
 
 class Landing extends Component {
     constructor(props) {
@@ -79,6 +78,8 @@ class Landing extends Component {
             pathname: '/play',
             state: {numPlayers: this.state.NumPlayers, userObjects: this.state.UserObjects}
         }}/>}
+                <img className="wolfie left" src="./images/wolfie.png"></img>
+                <img className="wolfie right" src="./images/wolfie.png"></img>
                 <div className="Title">
                     <h1> Welcome To</h1>
                     <h2> SBU MONOPOLY</h2>
@@ -93,9 +94,9 @@ class Landing extends Component {
                             <label>
                                 User 1 Piece/Color:
                                 <select name="piece1" size="4" value={this.state.Piece1} onChange={this.handleChange}>
-                                <option value="light-red">light-red</option>
-                                    <option value="light-blue">light-blue</option>
-                                    <option value="light-green">light-green</option>
+                                <option value="red">rosybrown</option>
+                                    <option value="blue">lightblue</option>
+                                    <option value="green">lightgreen</option>
                                     <option value="pink ">pink</option>
                                 </select>
                             </label>
@@ -108,9 +109,9 @@ class Landing extends Component {
                             <label>
                                 User 2 Piece/Color:
                                 <select name="piece2" size="4" value={this.state.Piece2} onChange={this.handleChange}>
-                                    <option value="light-red">light-red</option>
-                                    <option value="light-blue">light-blue</option>
-                                    <option value="light-green">light-green</option>
+                                <option value="red">rosybrown</option>
+                                    <option value="blue">lightblue</option>
+                                    <option value="green">lightgreen</option>
                                     <option value="pink ">pink</option>
                                 </select>
                             </label>
@@ -123,9 +124,9 @@ class Landing extends Component {
                             <label>
                                 User 3 Piece/Color:
                                 <select name="piece3" size="4" value={this.state.Piece3} onChange={this.handleChange}>
-                                <option value="light-red">light-red</option>
-                                    <option value="light-blue">light-blue</option>
-                                    <option value="light-green">light-green</option>
+                                <option value="red">rosybrown</option>
+                                    <option value="blue">lightblue</option>
+                                    <option value="green">lightgreen</option>
                                     <option value="pink ">pink</option>
                                 </select>
                             </label>
@@ -138,9 +139,9 @@ class Landing extends Component {
                             <label>
                                 User 4 Piece/Color:
                                 <select name="piece4" size="4" value={this.state.Piece4} onChange={this.handleChange}>
-                                <option value="light-red">light-red</option>
-                                    <option value="light-blue">light-blue</option>
-                                    <option value="light-green">light-green</option>
+                                <option value="red">rosybrown</option>
+                                    <option value="blue">lightblue</option>
+                                    <option value="green">lightgreen</option>
                                     <option value="pink ">pink</option>
                                 </select>
                             </label>

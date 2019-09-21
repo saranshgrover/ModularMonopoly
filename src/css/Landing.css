@@ -1,0 +1,16 @@
+body {
+    background-image: url();
+    background-color: gray;
+}
+
+.Landing {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
+.Title {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 40px;
+    letter-spacing: 10px;
+
+}
