@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import './css/HouseTile.css';
 
 class HouseTile extends Component {
     constructor(props) {
@@ -6,12 +7,11 @@ class HouseTile extends Component {
     }
 
     render() {
-        // Reference all props by doing: this.props.(prop name here). Assume props are accessable 
-        let nameOfProperty = this.props.nameOfProperty;
         return (
             <div className="HouseTile">
-                {/* Put html here */}
-                <p>{nameOfProperty}</p>
+                <p>{this.props.propertyName}</p>
+                <img src={this.props.imgSrc} alt={this.props.propertyName}></img>
+                <p>{this.props.footerPrice}</p>
             </div>
         );
     };
