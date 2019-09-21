@@ -24,7 +24,7 @@ class InformationBoard extends Component {
                     <span class="InformationBoard-PieceName">{value.getPieceName()}</span>
                 </div>
                 <div className="player_bank">
-                    <span>{value.getBalance()} </span>
+                    <span>DD ${value.getBalance()} </span>
                     <FontAwesomeIcon icon={faHouseDamage}/>
                     <span> {value.getHouseCount()} </span>
                     <FontAwesomeIcon icon={faHotel}/>
