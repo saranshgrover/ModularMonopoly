@@ -58,11 +58,7 @@ class Monopoly extends Component {
         //console.log(user);
         // currentPlayerTurn: {...st.currentPlayerTurn,  currentPosition: st.currentPlayerTurn.currentPosition + amountRolled},
         this.setState(st => ({
-            userObjects: [
-                ...st.userObjects.slice(0, indexOfPlayer),
-                user,
-                ...st.userObjects.slice(indexOfPlayer + 1)
-            ]
+            userObjects: users
         }));
         console.log(this.state.currentPlayerTurn);
         console.log(this.state.userObjects[0]);

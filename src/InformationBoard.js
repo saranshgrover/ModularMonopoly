@@ -45,7 +45,7 @@ class InformationBoard extends Component {
                     rollDone={this.rollDoneCallback}
                     ref={dice => this.reactDice = dice}
                     />
-                    <button onClick={this.rollAll} disabled={this.props.currentPlayer.hasRolled()}>Roll</button>
+                    <button onClick={this.rollAll} disabled={this.props.currentPlayer.hasRolled}>Roll</button>
                 </div>
             </div>
         );
