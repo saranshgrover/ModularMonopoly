@@ -23,8 +23,8 @@ class Landing extends Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
     handleChange(event) {
-        console.log(event.target.name + " " + event.target.value);
         this.setState({[event.target.name]: event.target.value});
+
       }
     handleSubmit(event) {
         event.preventDefault();
@@ -91,7 +91,7 @@ class Landing extends Component {
                             </label>
                             <label>
                                 User 1 Piece/Color:
-                                <select name="pieces1" size="4" value={this.state.Piece1} onChange={this.handleChange}>
+                                <select name="piece1" size="4" value={this.state.Piece1} onChange={this.handleChange}>
                                     <option value="car">Car</option>
                                     <option value="airplane">Airplane</option>
                                     <option value="skateboard">Skateboard</option>
@@ -106,7 +106,7 @@ class Landing extends Component {
                             </label>
                             <label>
                                 User 2 Piece/Color:
-                                <select name="pieces2" size="4" value={this.state.Piece2} onChange={this.handleChange}>
+                                <select name="piece2" size="4" value={this.state.Piece2} onChange={this.handleChange}>
                                     <option value="car">Car</option>
                                     <option value="airplane">Airplane</option>
                                     <option value="skateboard">Skateboard</option>
@@ -121,7 +121,7 @@ class Landing extends Component {
                             </label>
                             <label>
                                 User 3 Piece/Color:
-                                <select name="pieces3" size="4" value={this.state.Piece3} onChange={this.handleChange}>
+                                <select name="piece3" size="4" value={this.state.Piece3} onChange={this.handleChange}>
                                     <option value="car">Car</option>
                                     <option value="airplane">Airplane</option>
                                     <option value="skateboard">Skateboard</option>
@@ -136,7 +136,7 @@ class Landing extends Component {
                             </label>
                             <label>
                                 User 4 Piece/Color:
-                                <select name="pieces4" size="4" value={this.state.Piece4} onChange={this.handleChange}>
+                                <select name="piece4" size="4" value={this.state.Piece4} onChange={this.handleChange}>
                                     <option value="car">Car</option>
                                     <option value="airplane">Airplane</option>
                                     <option value="skateboard">Skateboard</option>
