@@ -9,14 +9,14 @@ class UtilityTile extends Component {
     }
 
     render() {
-        let bgStyle = '';
+        let bgStyle = null;
         let tileId = this.props.tileId;
         let playerId = this.props.player_pos;
         if(playerId==tileId) {
-            bgStyle += "background-color: " + this.props.player_color;
+            bgStyle = {backgroundColor: this.props.player_color};
         }
         return (
-            <div class="space utility electric-company" style={{bgStyle}}>
+            <div class="space utility electric-company" style={bgStyle}>
                 <div class="container">
                     <div class="name">{this.props.propertyName}</div>
                     <FontAwesomeIcon className="drawing" icon={faLightbulb}></FontAwesomeIcon>
