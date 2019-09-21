@@ -21,7 +21,7 @@ class CardPopUp extends Component {
         if (property.includes(this.props.id))
             cardType = "Property"
 
-        if(cardType="Chance") {
+        if(cardType=="Chance") {
             return (
                 <div className="CardPopUp_Chance">
                     <div className="Chance_Community_Text">
@@ -31,7 +31,7 @@ class CardPopUp extends Component {
                 </div>
             );
         }
-        else if (cardType="Community") {
+        else if (cardType=="Community") {
             return (
                 <div className="CardPopUp_Community">
                     <div className="Chance_Community_Text">
@@ -41,7 +41,7 @@ class CardPopUp extends Component {
                 </div>
             );
         }
-        else if (cardType="Property") {
+        else if (cardType=="Property") {
             return (
                 <div className="CardPopUp_Property">
                     <div className="Property_Header" style={this.props.color}>
