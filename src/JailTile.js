@@ -8,8 +8,14 @@ class JailTile extends Component {
         super(props);
     };
     render() {
+		let bgStyle = '';
+        let tileId = this.props.tileId;
+        let playerId = this.props.player_pos;
+        if(playerId==tileId) {
+            bgStyle += "background-color: " + this.props.player_color;
+        }
     return (
-        <div class="space corner jail">
+        <div class="space corner jail" style={{bgStyle}}>
            <div class="just">Just</div>
 			<div class="drawing">
 				<div class="container">

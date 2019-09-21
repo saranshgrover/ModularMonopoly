@@ -56,7 +56,7 @@ class Monopoly extends Component {
         stateCopy.userObjects[indexOfPlayer].setCurrentPosition(newPos);
         this.setState(stateCopy);
         console.log(this.state.userObjects);
-        this.doTurn(indexOfPlayer);
+        this.executeTurn(indexOfPlayer);
         /*console.log("Amount rolled: " + amountRolled);
         console.log(this.state.currentPlayerTurn);
         let currentPlayerTurn = this.state.currentPlayerTurn;
@@ -73,7 +73,9 @@ class Monopoly extends Component {
         console.log(this.state.currentPlayerTurn);
         console.log(this.state.userObjects[0]);*/
     }
-
+    executeTurn(indexOfPlayer) {
+        
+    }
     render() {
         return (
             <div className="Monopoly">

@@ -8,8 +8,14 @@ class FreeParkingTile extends Component {
         super(props);
     };
     render() {
+        let bgStyle = '';
+        let tileId = this.props.tileId;
+        let playerId = this.props.player_pos;
+        if(playerId==tileId) {
+            bgStyle += "background-color: " + this.props.player_color;
+        }
     return (
-        <div class="FreeParkingTile container">
+        <div class="FreeParkingTile container" style={{bgStyle}}>
             <div class="name">Free</div>
             <FontAwesomeIcon className="drawing" icon={faCar} />
             <i class="drawing fa fa-car"></i>

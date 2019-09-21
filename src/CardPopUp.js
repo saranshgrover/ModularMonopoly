@@ -8,6 +8,7 @@ class CardPopUp extends Component {
     }
 
     render() {
+        
         let cardType = '';
         let chances = [7, 28, 34]
         let community = [2, 17, 37]

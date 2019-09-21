@@ -8,8 +8,14 @@ class DiningTile extends Component {
         super(props);
     };
     render() {
+        let bgStyle = '';
+        let tileId = this.props.tileId;
+        let playerId = this.props.player_pos;
+        if(playerId==tileId) {
+            bgStyle += "background-color: " + this.props.player_color;
+        }
     return (
-        <div class="space dining">
+        <div class="space dining" style={{bgStyle}}>
             <div class="container">
                 <div class="name">{this.props.propertyName}</div>
                 <FontAwesomeIcon className="drawing" icon={faHotdog}></FontAwesomeIcon>

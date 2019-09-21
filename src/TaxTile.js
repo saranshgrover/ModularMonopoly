@@ -9,6 +9,12 @@ class TaxTile extends React.Component {
     }
 
     render() {
+        let bgStyle = '';
+        let tileId = this.props.tileId;
+        let playerId = this.props.player_pos;
+        if(playerId==tileId) {
+            bgStyle += "background-color: " + this.props.player_color;
+        }
         // Reference all props by doing: this.props.(prop name here). Assume props are accessable 
         let propertyName = this.props.propertyName;
         let spaceClass = "space";
@@ -17,7 +23,7 @@ class TaxTile extends React.Component {
         else
             spaceClass += " luxary-tax";
         return (
-            <div class={spaceClass}>
+            <div class={spaceClass} style={{bgStyle}}>
                 <div class="container">
                     <div class="name">{this.props.propertyName}</div>
                     <FontAwesomeIcon className="drawing" icon={faGem} />

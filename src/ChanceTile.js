@@ -10,9 +10,15 @@ class ChanceTile extends React.Component {
 
     render() {
         let tileName = this.props.propertyName;
+        let bgStyle = '';
+        let tileId = this.props.tileId;
+        let playerId = this.props.player_pos;
+        if(playerId==tileId) {
+            bgStyle += "background-color: " + this.props.player_color;
+        }
         if(tileName=="Chance") {
             return (
-                <div className="space chance">
+                <div className="space chance" style={{bgStyle}}>
                     <div className="container">
                         <div className="name">{this.props.propertyName}</div>
                         <FontAwesomeIcon className="drawing" icon={faQuestion} />

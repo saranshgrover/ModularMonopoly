@@ -75,7 +75,6 @@ class Landing extends Component {
         return (
 
             <div className="Landing">
-            <CardPopUp Name="Javits" color="red" id="1" BuildingPrices={[0, 2, 10, 30, 90, 160, 250, 60, 50]}/>
                 {this.state.readyToRedirect &&  <Redirect to = {{
             pathname: '/play',
             state: {numPlayers: this.state.NumPlayers, userObjects: this.state.UserObjects}
@@ -94,10 +93,10 @@ class Landing extends Component {
                             <label>
                                 User 1 Piece/Color:
                                 <select name="piece1" size="4" value={this.state.Piece1} onChange={this.handleChange}>
-                                    <option value="car">Car</option>
-                                    <option value="airplane">Airplane</option>
-                                    <option value="skateboard">Skateboard</option>
-                                    <option value="hat ">Hat</option>
+                                <option value="light-red">light-red</option>
+                                    <option value="light-blue">light-blue</option>
+                                    <option value="light-green">light-green</option>
+                                    <option value="pink ">pink</option>
                                 </select>
                             </label>
                         </div>
@@ -109,10 +108,10 @@ class Landing extends Component {
                             <label>
                                 User 2 Piece/Color:
                                 <select name="piece2" size="4" value={this.state.Piece2} onChange={this.handleChange}>
-                                    <option value="car">Car</option>
-                                    <option value="airplane">Airplane</option>
-                                    <option value="skateboard">Skateboard</option>
-                                    <option value="hat ">Hat</option>
+                                    <option value="light-red">light-red</option>
+                                    <option value="light-blue">light-blue</option>
+                                    <option value="light-green">light-green</option>
+                                    <option value="pink ">pink</option>
                                 </select>
                             </label>
                         </div>
@@ -124,10 +123,10 @@ class Landing extends Component {
                             <label>
                                 User 3 Piece/Color:
                                 <select name="piece3" size="4" value={this.state.Piece3} onChange={this.handleChange}>
-                                    <option value="car">Car</option>
-                                    <option value="airplane">Airplane</option>
-                                    <option value="skateboard">Skateboard</option>
-                                    <option value="hat ">Hat</option>
+                                <option value="light-red">light-red</option>
+                                    <option value="light-blue">light-blue</option>
+                                    <option value="light-green">light-green</option>
+                                    <option value="pink ">pink</option>
                                 </select>
                             </label>
                         </div>
@@ -139,10 +138,10 @@ class Landing extends Component {
                             <label>
                                 User 4 Piece/Color:
                                 <select name="piece4" size="4" value={this.state.Piece4} onChange={this.handleChange}>
-                                    <option value="car">Car</option>
-                                    <option value="airplane">Airplane</option>
-                                    <option value="skateboard">Skateboard</option>
-                                    <option value="hat ">Hat</option>
+                                <option value="light-red">light-red</option>
+                                    <option value="light-blue">light-blue</option>
+                                    <option value="light-green">light-green</option>
+                                    <option value="pink ">pink</option>
                                 </select>
                             </label>
                         </div>
