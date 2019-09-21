@@ -4,12 +4,16 @@ import React from 'react';
 import HouseTile from "./HouseTile.js";
 import javits from "./images/javits.jpg";
 import Monopoly from "./Monopoly";
+import { Switch, Route } from 'react-router-dom';
 
 function App() {
   //let img = require("../public/images/javits.jpg");
   return (
     <div className="App">
-      <Monopoly />
+      <Switch>
+        <Route exact path="/" />
+        <Route exact path="/play" component={Monopoly} />
+      </Switch>
     </div>
   );
 }

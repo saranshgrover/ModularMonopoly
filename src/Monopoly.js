@@ -3,7 +3,12 @@ import GameBoard from './GameBoard';
 
 class Monopoly extends Component {
     constructor(props) {
-        super();    
+        super();
+
+        this.state = {
+            userObjects: new Array()
+
+        };
     }
 
     render() {
