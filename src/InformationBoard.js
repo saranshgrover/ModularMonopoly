@@ -1,34 +1,23 @@
 import React, { Component } from 'react'
-
+import './css/InformationBoard.scss';
 class InformationBoard extends Component {
     constructor(props) {
         super();
     }
 
     render() {
-        //Player.userName
-        //Player.nameOfPiece
-        //properties array????
-        //Player.currentMoney
-        //Player.isTurn
-        //Player.isInJail
-        //Player.getOutOfJailAmount
-        //Player.houseCount
-        //Player.hotelCount
-
-        //How many turns left
-        //Properties?
-        //array of all users
+        let userObjects = this.props.userObjects;
+        const items = []
+        for(const [index,value] of userObjects.entries()) {
+            items.push(
+            <div className="information_board_player">
+                <h1>{value.getName()}</h1>
+            </div> 
+            )}
         return (
-            <div className="playerName">
-            {this.props.userObjects.map(player => {
-                return (
-                    <div className="INSERTNAMEHERE" key={player.userName}>
-
-                    </div>
-                )
-            })}
-        </div>
+            <div className="flex-container">
+                {items}
+            </div>
         );
     }
 }
