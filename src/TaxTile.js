@@ -26,3 +26,4 @@ class TaxTile extends React.Component {
     };
 
 }
+export default TaxTile;

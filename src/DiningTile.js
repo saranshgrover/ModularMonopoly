@@ -8,13 +8,13 @@ class DiningTile extends Component {
     render() {
     return (
         <div className="DiningTile">
-            <image className="DiningTileImg" src={this.props.imgSrc}></image>
-            <div className="DiningTileName">
-                <p>{this.props.propertyName}</p>
-            </div>
-            <div className="DiningTileFooter">
-                <p>{this.props.footerPrice}</p>
-            </div>
+            <div class="space dining">
+				<div class="container">
+					<div class="name">{this.props.propertyName}</div>
+					<i class="drawing fa fa-subway"></i>
+					<div class="price">Price: {this.props.footerPrice}</div>
+				</div>
+			</div>
         </div>
     )
     };

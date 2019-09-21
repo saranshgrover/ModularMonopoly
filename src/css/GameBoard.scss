@@ -1,3 +1,136 @@
-.GameBoard {
-    // Temp
+// =================
+// TYPOGRAPHY
+// =================
+
+$body-font: 'Oswald', sans-serif;
+
+
+// =================
+// COLORS
+// =================
+
+$black: #080808;
+$brown: #640303;
+$board: #fafaf8;
+$dark-purple: #5e3577;
+$light-blue: #d2eaf5;
+$purple: #b02f7c;
+$orange: #fa811d;
+$red: #f50c2b;
+$yellow: #ffed20;
+$green: #41994e;
+$dark-blue: #5a6dba;
+
+
+// =================
+// GLOBAL
+// =================
+
+* {
+	box-sizing: border-box;
 }
+
+.GameBoard {
+	display: grid;
+	grid-template-columns: 125px repeat(9, 80px) 125px;
+	grid-template-rows: 125px repeat(9, 80px) 125px;
+	grid-gap: 2px;
+	margin: 50px auto;
+	width: 994px;
+	height: 994px;
+    border: 2px solid black;
+    padding-left: 50px;
+	padding-right: 50px;
+}
+.center {
+	grid-column: 2 / 11;
+	grid-row: 2 / 11;
+	background: $board;
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+	grid-template-rows: repeat(7, 1fr);
+	justify-items: center;
+	align-items: center;
+}
+
+// Rows of spaces
+
+.row {
+	display: grid;
+	grid-gap: 2px;
+}
+
+.horizontal-row {
+	grid-template-columns: repeat(9, 80px);
+	grid-template-rows: 125px;
+}
+
+.vertical-row {
+	grid-template-columns: 125px;
+	grid-template-rows: repeat(9, 80px);
+}
+
+.bottom-row {
+	grid-column: 2 / 11;
+	grid-row: 11;
+}
+
+.left-row {
+	grid-column: 1;
+	grid-row: 2 / 11;
+}
+
+.top-row {
+	grid-column: 2 / 11;
+	grid-row: 1;
+}
+
+.right-row {
+	grid-column: 11;
+	grid-row: 2 / 11;
+
+}
+
+// =================
+// SPACES
+// =================
+
+// Types of spaces
+
+.space {
+	background: $board;
+	text-align: center;
+}
+
+// =================
+// CORNERS
+// =================
+
+// Corners?
+
+.go {
+    grid-column: 11;
+	grid-row: 11 / 12;
+	position: relative;
+}
+
+.jail {
+    grid-column: 1;
+	grid-row: 11 / 12;
+	display: grid;
+	grid-template-columns: repeat(10, 12.5px);
+	grid-template-rows: repeat(10, 12.5px);
+	justify-content: center;
+	align-items: center;
+}
+
+.free-parking {
+    grid-column: 1;
+	grid-row: 1 / 2;
+}
+
+.go-to-jail {
+    grid-column: 11;
+	grid-row: 1 / 1;
+}
+

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './css/HouseTile.scss';
+import './css/tiles.scss';
 
 class HouseTile extends Component {
     constructor(props) {
@@ -7,11 +7,29 @@ class HouseTile extends Component {
     }
 
     render() {
+        let posStyle = ""
+        if(this.props.tileId<10) {
+            posStyle = "bottom"
+        }
+        else if(this.props.tileId>10 && this.props.tileId<20) {
+            posStyle = "left";
+        }
+        else if(this.props.tileId>20 && this.props.tileId<30) {
+            posStyle = "top";
+        }
+        else {
+            posStyle = "right";
+        }
+        let color = "color-bar" + " " + this.props.colorGroup;
         return (
             <div className="HouseTile">
-                <p className="HouseTileName">{this.props.propertyName}</p>
-                <img className="HouseTileImage" src={this.props.imgSrc} alt={this.props.propertyName}></img>
-                <p className="HouseTileFooter">{this.props.footerPrice}</p>
+                <div className="space property">
+                    <div className="container">
+                        <div className={color}></div>
+                        <div class="name">{this.props.propertyName}</div>
+                        <div class="price">{this.props.footerPrice}</div>
+                    </div>
+                </div>
             </div>
         );
     };

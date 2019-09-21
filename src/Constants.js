@@ -1,6 +1,6 @@
 const Color = {
     Brown: "#955436",
-    Light_Blue: "#AAE0FA",
+    LightBlue: "#AAE0FA",
     Pink: "#D93A96",
     Orange: "#F7941D",
     Red: "#ED1B24",

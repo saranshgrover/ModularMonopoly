@@ -1,16 +1,37 @@
 .HouseTile {
+    .left {
+        .container {
+            transform: translate(-50%, -50%) rotate(90deg);
+        }
+    }
+    .right {
+        .container {
+            transform: translate(-50%, -50%) rotate(270deg);
+        }
+    }
+    .top {
+        .container {
+            transform: rotate(180deg);
+        }
+    }
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     position: relative;
     transform-origin: center;
-    height: 125px;
-    width: 80px;
+    height: 100px;
+    width: 180px;
+
+    .HouseTileHeader {
+        height: 25px;
+		border-bottom: 2px solid black;
+    }
 
     .HouseTileName {
         padding-left: 15px;
-		padding-right: 15px;
+        padding-right: 15px;
+        padding-bottom: 50px;
     }
     .HouseTileFooter {
         font-size: 7px;

@@ -7,19 +7,34 @@ class ChanceTile extends React.Component {
     }
 
     render() {
-        // Reference all props by doing: this.props.(prop name here). Assume props are accessable 
-        let nameOfProperty = this.props.nameOfProperty;
-        return (
-            <div className="ChanceTile">
-                {/* Put html here */}
-                <div className="ChanceTileName">
-                    <p>{this.props.propertyName}</p>
+        let tileName = this.props.propertyName;
+        if(tileName=="Chance") {
+            return (
+                <div className="ChanceTile">
+                    <div class="space chance">
+                        <div class="container">
+                            <div class="name">{this.props.propertyName}</div>
+                            <i class="drawing fa fa-question"></i>
+                        </div>
+                    </div>
                 </div>
-                <div className="ChanceTilePicture">
-                    <image src={this.props.imgSrc}></image>
+            );
+        }
+        else {
+            return (
+                <div className="ChanceTile">
+                    <div class="space community-chest">
+				        <div class="container">
+                            <div class="name">Community Chest</div>
+                            <i class="drawing fa fa-cube"></i>
+                            <div class="instructions">Follow instructions on top card</div>
+				        </div>
+			        </div>
                 </div>
-            </div>
-        );
+            );
+        }
     };
 
 }
+
+export default ChanceTile;

@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import './Monopoly.scss';
 import GameBoard from './GameBoard';
 
-class Monopoly extends Comment {
+class Monopoly extends Component {
     constructor(props) {
         super();    
     }

@@ -1,0 +1,89 @@
+.CornerTile {
+    .container {
+        justify-content: flex-start;
+        transform: rotate(315deg);
+        display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		position: relative;
+		transform-origin: center;
+		height: 125px;
+        width: 80px;
+        
+    }
+    .CornerTileHeader, .CornerTileName {
+        padding-left: 15px;
+		padding-right: 15px;
+    }
+    .go {
+        grid-column: 11;
+        grid-row: 11 / 12;
+        position: relative;
+    
+        .container {
+            justify-content: flex-start;
+            transform: rotate(315deg);
+        }
+    
+        .CornerTileHeader {
+            padding: 0 30px;
+        }
+    
+        .CornerTileName {
+            font-size: 60px;
+            color: red;
+        }
+    
+        .arrow {
+            font-size: 45px;
+            color: red;
+            position: absolute;
+            bottom: -10px;
+            left: 5px;
+        }
+    }
+    .free-parking {
+        grid-column: 1;
+        grid-row: 1 / 2;
+    
+        .container {
+            justify-content: center;
+            transform: rotate(135deg);
+        }
+    
+        .CornerTileName {
+            font-size: 16px;
+        }
+    }
+    .jail {
+        grid-column: 1;
+        grid-row: 11 / 12;
+        display: grid;
+        grid-template-columns: repeat(10, 12.5px);
+        grid-template-rows: repeat(10, 12.5px);
+        justify-content: center;
+        align-items: center;
+        .container {
+            align-items: center;
+            transform: rotate(45deg);
+        }
+    
+        .CornerTileName {
+            font-size: 14px;
+        }
+    
+    }
+    .go-to-jail {
+        grid-column: 11;
+        grid-row: 1 / 1;
+    
+        .container {
+            justify-content: center;
+            transform: rotate(225deg);
+        }
+    
+        .CornerTileName {
+            font-size: 16px;
+        }
+    }
+}
