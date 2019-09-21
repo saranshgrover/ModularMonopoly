@@ -27,7 +27,7 @@ class GameBoard extends Component {
                             <h2 class="label">Community Chest</h2>
                             <div class="deck"></div>
 			            </div>
-			            <h1 class="title">MONOPOLY</h1>
+			            <h1 class="title">SBU MONOPOLY</h1>
                         <div class="chance-deck">
                             <h2 class="label">Chance</h2>
                             <div class="deck"></div>
