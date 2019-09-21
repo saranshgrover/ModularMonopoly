@@ -1,3 +1,20 @@
 .HouseTile {
-    /* Temp */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    transform-origin: center;
+    height: 125px;
+    width: 80px;
+
+    .HouseTileName {
+        padding-left: 15px;
+		padding-right: 15px;
+    }
+    .HouseTileFooter {
+        font-size: 7px;
+		font-weight: 400;
+		padding-bottom: 5px;
+    }
 }
