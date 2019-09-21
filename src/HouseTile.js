@@ -17,3 +17,5 @@ class HouseTile extends Component {
     };
 
 }
+
+export default HouseTile; // Export the name of the component!!!
