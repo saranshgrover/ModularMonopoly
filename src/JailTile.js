@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import "./css/tiles.scss"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFrownOpen  } from '@fortawesome/free-solid-svg-icons'
 
 class JailTile extends Component {
     constructor(props) {
@@ -16,7 +18,8 @@ class JailTile extends Component {
 						<div class="bar"></div>
 						<div class="bar"></div>
 						<div class="bar"></div>
-						<i class="person fa fa-frown-o"></i>
+						<FontAwesomeIcon className="person" icon={faFrownOpen} />
+						{/* <i class="person fa fa-frown-o"></i> */}
 					</div>
 					<div class="name">Jail</div>
 				</div>

@@ -424,7 +424,8 @@ h1, h2, h3, h4, h5, h6 {
 	}
 
 	.drawing {
-		font-size: 90px;
+		margin: 0 auto;
+		font-size: 75px;
 		color: $red;
 	}
 
@@ -439,6 +440,7 @@ h1, h2, h3, h4, h5, h6 {
 	}
 
 	.drawing {
+		margin: 0 auto;
 		font-size: 50px;
 		color: $light-blue;
 	}

@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import './css/ChanceTile.scss'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faQuestion, faCube } from '@fortawesome/free-solid-svg-icons'
 
 class ChanceTile extends React.Component {
     constructor(props) {
@@ -11,10 +13,11 @@ class ChanceTile extends React.Component {
         if(tileName=="Chance") {
             return (
                 <div className="ChanceTile">
-                    <div class="space chance">
-                        <div class="container">
-                            <div class="name">{this.props.propertyName}</div>
-                            <i class="drawing fa fa-question"></i>
+                    <div className="space chance">
+                        <div className="container">
+                            <div className="name">{this.props.propertyName}</div>
+                            <FontAwesomeIcon className="drawing" icon={faQuestion} />
+                            {/* <i class="drawing fa fa-question"></i> */}
                         </div>
                     </div>
                 </div>
@@ -23,11 +26,12 @@ class ChanceTile extends React.Component {
         else {
             return (
                 <div className="ChanceTile">
-                    <div class="space community-chest">
-				        <div class="container">
-                            <div class="name">Community Chest</div>
-                            <i class="drawing fa fa-cube"></i>
-                            <div class="instructions">Follow instructions on top card</div>
+                    <div className="space community-chest">
+				        <div className="container">
+                            <div className="name">Community Chest</div>
+                            <FontAwesomeIcon className="drawing" icon={faCube} />
+                            {/* <i className="drawing fa fa-cube"></i> */}
+                            <div className="instructions">Follow instructions on top card</div>
 				        </div>
 			        </div>
                 </div>
