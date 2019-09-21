@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-class InformationBoard extends React.Component {
+class InformationBoard extends Component {
     constructor(props) {
         super();
     }
@@ -19,7 +19,8 @@ class InformationBoard extends React.Component {
         //How many turns left
         //Properties?
         //array of all users
-        <div className="playerName">
+        return (
+            <div className="playerName">
             {this.props.userObjects.map(player => {
                 return (
                     <div className="INSERTNAMEHERE" key={player.userName}>
@@ -28,5 +29,8 @@ class InformationBoard extends React.Component {
                 )
             })}
         </div>
+        );
     }
 }
+
+export default InformationBoard;
