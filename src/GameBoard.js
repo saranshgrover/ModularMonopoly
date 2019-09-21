@@ -33,9 +33,7 @@ class GameBoard extends Component {
                             <div class="deck"></div>
                         </div>
                     </div>
-                    <div className="space corner go">
-                        <GoTile propertyName="SAC Loop" tileId={0} tileInstruction="Collect $200 as you pass go"/>
-                    </div>
+                    <GoTile propertyName="SAC Loop" tileId={0} tileInstruction="Collect $200 as you pass go"/>
                     <div className="row horizontal-row bottom-row">
                     <HouseTile propertyName="Melville Library" tileId={9} colorGroup="light-blue" footerPrice="$200" />  
                     <HouseTile propertyName="Frey Hall" tileId={8} colorGroup="light-blue" />
@@ -47,9 +45,7 @@ class GameBoard extends Component {
                     <ChanceTile propertyName="Community Chest" tileId={2}/>
                     <HouseTile propertyName="Earth & Space Sciences" tileId={1} colorGroup="brown" />
                     </div>
-                    <div className ="space corner jail">
-                        <JailTile propertyName="Jail" tileId={10} />
-                    </div>
+                    <JailTile propertyName="Jail" tileId={10} />
                     <div className="row vertical-row left-row">
                         <HouseTile propertyName="Light Engineering" tileId={19} colorGroup={Color.Orange}/>
                         <HouseTile propertyName="New Comp Sci" tileId={18} colorGroup={Color.Orange}/>

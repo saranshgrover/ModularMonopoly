@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import "./css/tiles.scss"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGavel  } from '@fortawesome/free-solid-svg-icons'
 
 class GoToJailTile extends Component {
     constructor(props) {
@@ -7,13 +9,13 @@ class GoToJailTile extends Component {
     };
     render() {
     return (
-        <div class="GoToJailTile">
-            <div class="container">
-				<div class="name">Go To</div>
-				<i class="drawing fa fa-gavel"></i>
-				<div class="name">Jail</div>
-			</div>
+        <div class="GoToJailTile container">
+            <div class="name">Go To</div>
+            <FontAwesomeIcon className="drawing" icon={faGavel} />
+            <i class="drawing fa fa-gavel"></i>
+            <div class="name">Jail</div>
         </div>
+
     )
     };
 }

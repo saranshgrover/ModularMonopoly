@@ -250,7 +250,8 @@ h1, h2, h3, h4, h5, h6 {
 	}
 
 	.drawing {
-		font-size: 60px;
+		font-size: 50px;
+		margin: auto;
 		color: $black;
 	}
 }
@@ -261,7 +262,8 @@ h1, h2, h3, h4, h5, h6 {
 	}
 
 	.drawing {
-		font-size: 70px;
+		margin: auto;
+		font-size: 55px;
 	}
 }
 
@@ -316,64 +318,61 @@ h1, h2, h3, h4, h5, h6 {
 	justify-content: center;
 	align-items: center;
 
-	.JailTile {
+	.drawing {
+		grid-column: 4 / 11;
+		grid-row: 1 / 8;
+		width: 87.5px;
+		height: 87.5px;
+		background: $orange;
+		border-bottom: 2px solid $black;
+		border-left: 2px solid $black;
+	}
 
-		.drawing {
-			grid-column: 4 / 11;
-			grid-row: 1 / 8;
-			width: 87.5px;
-			height: 87.5px;
-			background: $orange;
-			border-bottom: 2px solid $black;
-			border-left: 2px solid $black;
-		}
-	
-		.just {
-			grid-column: 3;
-			grid-row: 4;
-			transform: rotate(90deg);
-			padding-top: 5px;
-		}
-	
-		.visiting {
-			grid-column: 6;
-			grid-row: 8;
-			padding-top: 5px;
-		}
-	
-		.container {
-			align-items: center;
-			transform: rotate(45deg);
-		}
-	
-		.name {
-			font-size: 14px;
-		}
-	
-		.window {
-			display: flex;
-			justify-content: space-around;
-		    align-items: center;
-			position: relative;
-			width: 55px;
-			height: 55px;
-			background: $board;
-			border: 2px solid $black;
-		}
-	
-		.person {
-			position: absolute;
-			transform: translate(-50%, -50%);
-			top: 50%;
-			left: 50%;
-			font-size: 40px;
-		}
-	
-		.bar {
-			height: 55px;
-			width: 2px;
-			background: $black;
-		}
+	.just {
+		grid-column: 3;
+		grid-row: 4;
+		transform: rotate(90deg);
+		padding-top: 5px;
+	}
+
+	.visiting {
+		grid-column: 6;
+		grid-row: 8;
+		padding-top: 5px;
+	}
+
+	.container {
+		align-items: center;
+		transform: rotate(45deg);
+	}
+
+	.name {
+		font-size: 14px;
+	}
+
+	.window {
+		display: flex;
+		justify-content: space-around;
+    align-items: center;
+		position: relative;
+		width: 55px;
+		height: 55px;
+		background: $board;
+		border: 2px solid $black;
+	}
+
+	.person {
+		position: absolute;
+		transform: translate(-50%, -50%);
+		top: 50%;
+		left: 50%;
+		font-size: 40px;
+	}
+
+	.bar {
+		height: 55px;
+		width: 2px;
+		background: $black;
 	}
 }
 
@@ -391,6 +390,50 @@ h1, h2, h3, h4, h5, h6 {
 	}
 
 	.drawing {
+		font-size: 60px;
+		color: $red;
+		padding-top: 5px;
+		padding-bottom: 5px;
+	}
+}
+
+.go-to-jail {
+	grid-column: 11;
+	grid-row: 1 / 1;
+
+	.container {
+		justify-content: center;
+		transform: rotate(225deg);
+	}
+
+	.name {
+		font-size: 16px;
+	}
+
+	.drawing {
+		margin: auto;
+		font-size: 60px;
+		color: $brown;
+		padding-top: 5px;
+		padding-bottom: 5px;
+	}
+}
+
+.free-parking {
+	grid-column: 1;
+	grid-row: 1 / 2;
+
+	.container {
+		justify-content: center;
+		transform: rotate(135deg);
+	}
+
+	.name {
+		font-size: 16px;
+	}
+
+	.drawing {
+		margin: auto;
 		font-size: 60px;
 		color: $red;
 		padding-top: 5px;
@@ -472,13 +515,8 @@ h1, h2, h3, h4, h5, h6 {
 	.name {
 		padding-bottom: 5px;
 	}
-
-	.diamond {
-		width: 5px;
-		height: 5px;
-		background: $black;
-		transform: rotate(45deg);
-		display: inline-block
+	.drawing {
+		font-size: 30px;
 	}
 
 	.instructions {
@@ -489,7 +527,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .luxury-tax {
 	.drawing {
-		font-size: 50px;
+		font-size: 30px;
 	}
 
 	.instructions {

@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import './css/TaxTile.scss';
+import './css/tiles.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGem  } from '@fortawesome/free-solid-svg-icons'
 
 class TaxTile extends React.Component {
     constructor(props) {
@@ -18,7 +20,7 @@ class TaxTile extends React.Component {
             <div class={spaceClass}>
                 <div class="container">
                     <div class="name">{this.props.propertyName}</div>
-                    <div class="drawing fa fa-diamond"></div>
+                    <FontAwesomeIcon className="drawing" icon={faGem} />
                     <div class="instructions">{this.props.footerPrice}</div>
                 </div>
             </div>

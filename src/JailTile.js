@@ -9,7 +9,7 @@ class JailTile extends Component {
     };
     render() {
     return (
-        <div class="JailTile">
+        <div class="space corner jail">
            <div class="just">Just</div>
 			<div class="drawing">
 				<div class="container">

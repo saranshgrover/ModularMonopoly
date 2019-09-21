@@ -7,7 +7,7 @@ class CornerTile extends Component {
     };
     render() {
     return (
-        <div className="GoTile">
+        <div className="space corner go">
             <div className="container">
                 <div className="instructions">Collect $200.00 salary as you pass</div>
                 <div className="go-word">go</div>

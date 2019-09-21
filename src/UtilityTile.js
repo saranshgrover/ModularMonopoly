@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import './css/UtilityTile.scss';
+import './css/tiles.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faLightbulb  } from '@fortawesome/free-solid-svg-icons'
 
 class UtilityTile extends Component {
     constructor(props) {
@@ -11,7 +13,7 @@ class UtilityTile extends Component {
             <div class="space utility electric-company">
                 <div class="container">
                     <div class="name">{this.props.propertyName}</div>
-                    <i class="drawing fa fa-lightbulb-o"></i>
+                    <FontAwesomeIcon className="drawing" icon={faLightbulb}></FontAwesomeIcon>
                     <div class="price">Price: {this.props.footerPrice}</div>
                 </div>
             </div>

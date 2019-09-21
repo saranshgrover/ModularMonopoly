@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './css/ChanceTile.scss'
+import './css/tiles.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faQuestion, faCube } from '@fortawesome/free-solid-svg-icons'
 
