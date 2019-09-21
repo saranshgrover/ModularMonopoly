@@ -8,14 +8,12 @@ class UtilityTile extends Component {
 
     render() {
         return (
-            <div className="UtilityTile">
-                <div class="space utility electric-company">
-                    <div class="container">
-                        <div class="name">{this.props.propertyName}</div>
-                        <i class="drawing fa fa-lightbulb-o"></i>
-                        <div class="price">Price: {this.props.footerPrice}</div>
-                    </div>
-			    </div>
+            <div class="space utility electric-company">
+                <div class="container">
+                    <div class="name">{this.props.propertyName}</div>
+                    <i class="drawing fa fa-lightbulb-o"></i>
+                    <div class="price">Price: {this.props.footerPrice}</div>
+                </div>
             </div>
         );
     }

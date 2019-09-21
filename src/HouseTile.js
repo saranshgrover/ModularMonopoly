@@ -22,13 +22,11 @@ class HouseTile extends Component {
         }
         let color = "color-bar" + " " + this.props.colorGroup;
         return (
-            <div className="HouseTile">
-                <div className="space property">
-                    <div className="container">
-                        <div className={color}></div>
-                        <div class="name">{this.props.propertyName}</div>
-                        <div class="price">{this.props.footerPrice}</div>
-                    </div>
+            <div className="HouseTile space property">
+                <div className="container">
+                    <div className={color}></div>
+                    <div class="name">{this.props.propertyName}</div>
+                    <div class="price">{this.props.footerPrice}</div>
                 </div>
             </div>
         );

@@ -12,28 +12,25 @@ class ChanceTile extends React.Component {
         let tileName = this.props.propertyName;
         if(tileName=="Chance") {
             return (
-                <div className="ChanceTile">
-                    <div className="space chance">
-                        <div className="container">
-                            <div className="name">{this.props.propertyName}</div>
-                            <FontAwesomeIcon className="drawing" icon={faQuestion} />
-                            {/* <i class="drawing fa fa-question"></i> */}
-                        </div>
+                <div className="space chance">
+                    <div className="container">
+                        <div className="name">{this.props.propertyName}</div>
+                        <FontAwesomeIcon className="drawing" icon={faQuestion} />
+                        {/* <i class="drawing fa fa-question"></i> */}
                     </div>
                 </div>
+
             );
         }
         else {
             return (
-                <div className="ChanceTile">
-                    <div className="space community-chest">
-				        <div className="container">
-                            <div className="name">Community Chest</div>
-                            <FontAwesomeIcon className="drawing" icon={faCube} />
-                            {/* <i className="drawing fa fa-cube"></i> */}
-                            <div className="instructions">Follow instructions on top card</div>
-				        </div>
-			        </div>
+                <div className="space community-chest">
+                    <div className="container">
+                        <div className="name">Community Chest</div>
+                        <FontAwesomeIcon className="drawing" icon={faCube} />
+                        {/* <i className="drawing fa fa-cube"></i> */}
+                        <div className="instructions">Follow instructions on top card</div>
+                    </div>
                 </div>
             );
         }

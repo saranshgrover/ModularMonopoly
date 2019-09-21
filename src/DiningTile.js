@@ -7,14 +7,12 @@ class DiningTile extends Component {
     };
     render() {
     return (
-        <div className="DiningTile">
-            <div class="space dining">
-				<div class="container">
-					<div class="name">{this.props.propertyName}</div>
-					<i class="drawing fa fa-subway"></i>
-					<div class="price">Price: {this.props.footerPrice}</div>
-				</div>
-			</div>
+        <div class="space dining">
+            <div class="container">
+                <div class="name">{this.props.propertyName}</div>
+                <i class="drawing fa fa-subway"></i>
+                <div class="price">Price: {this.props.footerPrice}</div>
+            </div>
         </div>
     )
     };
