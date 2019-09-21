@@ -3,7 +3,7 @@ import ReactDice from 'react-dice-complete'
 import 'react-dice-complete/dist/react-dice-complete.css'
 import './css/InformationBoard.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPuzzlePiece, faHotel } from '@fortawesome/free-solid-svg-icons'
+import { faPuzzlePiece, faHotel, faHouseDamage } from '@fortawesome/free-solid-svg-icons'
 class InformationBoard extends Component {
     constructor(props) {
         super();
@@ -24,10 +24,10 @@ class InformationBoard extends Component {
                 </div>
                 <div className="player_bank">
                     {value.getBalance()}
-                    <FontAwesomeIcon icon={faHouse}/>
+                    <FontAwesomeIcon icon={faHouseDamage}/>
                     {value.getHouseCount()}
                     <FontAwesomeIcon icon={faHotel}/>
-                    {value.getHotelCount*}
+                    {value.getHotelCount()}
                 </div>
                 <div className="player_position">
 
