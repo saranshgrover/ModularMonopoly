@@ -6,13 +6,27 @@ class InformationBoard extends React.Component {
     }
 
     render() {
-        //Player names
+        //Player.userName
+        //Player.nameOfPiece
+        //properties array????
+        //Player.currentMoney
+        //Player.isTurn
+        //Player.isInJail
+        //Player.getOutOfJailAmount
+        //Player.houseCount
+        //Player.hotelCount
+
         //How many turns left
-        //Money
         //Properties?
         //array of all users
         <div className="playerName">
-            <p>{this.props.userObjects}</p>
+            {this.props.userObjects.map(player => {
+                return (
+                    <div className="INSERTNAMEHERE" key={player.userName}>
+
+                    </div>
+                )
+            })}
         </div>
     }
 }
