@@ -30,7 +30,7 @@ class ChanceTile extends React.Component {
         }
         else {
             return (
-                <div className="space community-chest">
+                <div className="space community-chest" style={bgStyle}>
                     <div className="container">
                         <div className="name">Community Chest</div>
                         <FontAwesomeIcon className="drawing" icon={faCube} />
