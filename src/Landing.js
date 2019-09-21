@@ -78,8 +78,6 @@ class Landing extends Component {
             pathname: '/play',
             state: {numPlayers: this.state.NumPlayers, userObjects: this.state.UserObjects}
         }}/>}
-                <img className="wolfie left" src="./images/wolfie.png"></img>
-                <img className="wolfie right" src="./images/wolfie.png"></img>
                 <div className="Title">
                     <h1> Welcome To</h1>
                     <h2> SBU MONOPOLY</h2>
