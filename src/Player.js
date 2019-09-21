@@ -1,4 +1,7 @@
 export default class Player {
+    constructor() {
+        this.balance = 1500;
+    }
     getName() {
         return this.name;
     }
