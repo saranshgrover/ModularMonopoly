@@ -9,6 +9,7 @@ export default class Player {
         this.houseCount = 0;
         this.hotelCount = 0;
         this.hasRolled = false;
+        this.currentPosition = 0;
     }
     getName() {
         return this.name;
@@ -80,6 +81,12 @@ export default class Player {
 
     getHotelCount() {
         return this.hotelCount;
+    }
+    getCurrentPosition() {
+        return this.currentPosition;
+    }
+    setCurrentPosition(newPos) {
+        this.currentPosition = newPos;
     }
 
 }
