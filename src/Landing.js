@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import GameBoard from './GameBoard';
 import {Redirect} from 'react-router-dom';
+import Player from './Player.js';
 
 class Landing extends Component {
     constructor(props) {
@@ -27,9 +28,46 @@ class Landing extends Component {
       }
     handleSubmit(event) {
         event.preventDefault();
-        this.setState({readyToRedirect: true});
-
-
+        let numPlayers = 0;
+        let userObjects = new Array();
+        if(this.state.Name1!=='' && this.state.Piece1!=='') {
+            numPlayers+=1;
+            let player1 = new Player();
+            player1.setName(this.state.Name1);
+            player1.setPieceName(this.state.Piece1);
+            userObjects.push(player1);
+        }
+        if(this.state.Name2!=='' && this.state.Piece2!=='') {
+            numPlayers+=1;
+            let player2 = new Player();
+            player2.setName(this.state.Name2);
+            player2.setPieceName(this.state.Piece2);
+            userObjects.push(player2);
+        }
+        if(this.state.Name3!=='' && this.state.Piece3!=='') {
+            numPlayers+=1;
+            let player3 = new Player();
+            player3.setName(this.state.Name3);
+            player3.setPieceName(this.state.Piece3);
+            userObjects.push(player3);
+        }
+        if(this.state.Name4!=='' && this.state.Piece4!=='') {
+            numPlayers+=1;
+            let player4 = new Player();
+            player4.setName(this.state.Name4);
+            player4.setPieceName(this.state.Piece4);
+            userObjects.push(player4);
+        }
+        if(numPlayers>0) {
+            this.setState({
+                readyToRedirect: true,
+                NumPlayers: numPlayers,
+                UserObjects: userObjects
+            });
+        }
+        else {
+            alert("Please enter a valid set in order to continue");
+        }
     }
 
     render() {
