@@ -14,3 +14,5 @@ class GameBoard extends GameBoard {
         );
     }
 }
+
+export default GameBoard;

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Monopoly.css';
+import GameBoard from './GameBoard';
 
 class Monopoly extends Comment {
     constructor(props) {
@@ -9,8 +10,10 @@ class Monopoly extends Comment {
     render() {
         return (
             <div className="Monopoly">
-                
+                <GameBoard />
             </div>
         );
     }
 }
+
+export default Monopoly;
