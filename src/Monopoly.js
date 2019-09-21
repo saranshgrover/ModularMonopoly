@@ -8,30 +8,32 @@ class Monopoly extends Component {
     constructor(props) {
         super(props);
         if (typeof this.props.location.state != "undefined")
-            this.state = {
-                readyToPlay: true,
-                userObjects: this.props.location.state.userObjects,
-                currentPlayerTurn: null,
-                turnCount: 0
-            };
+            if (typeof this.props.location.state.userObjects != "undefined")
+                this.state = {
+                    readyToPlay: true,
+                    userObjects: this.props.location.state.userObjects,
+                    currentPlayerTurn: null,
+                    turnCount: 0
+                };
+            else 
+                this.state = {
+                    readyToPlay: false
+                };
         else
             this.state = {
                 readyToPlay: false
             };
     }
 
-    // componentDidMount() {
-    //     if (this.state.userObjects.length == 0) {
-    //         this.setState({readyToPlay: false});
-    //     }
-    // }
-
     render() {
         return (
             <div className="Monopoly">
-                {!this.state.readyToPlay && <Redirect to='/' /> }
-                <GameBoard userObjects={this.state.userObjects} />
-                <InformationBoard userObjects={this.state.userObjects} />
+                {this.state.readyToPlay == false 
+                ? <Redirect to='/' /> 
+                : <div>
+                    <GameBoard userObjects={this.state.userObjects} />
+                    <InformationBoard userObjects={this.state.userObjects} />
+                  </div> }
             </div>
         );
     }
