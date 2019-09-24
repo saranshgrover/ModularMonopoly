@@ -68,29 +68,29 @@ class GameBoard extends Component {
                         <FreeParkingTile propertyName="Free Parking" tileId={20} player_pos={player_pos} player_color={player_color}/>
                     </div>
                     <div className="row horizontal-row top-row">
-                        <HouseTile propertyName="Cardozo College" tileId={29} colorGroup="red" footerPrice="$220" player_pos={player_pos} player_color={player_color} />
-                        <ChanceTile propertyName="Chance" tileId={28}/>
-                        <HouseTile propertyName="Mount College" tileId={27} colorGroup="red" footerPrice="$220" player_pos={player_pos} player_color={player_color} />
-                        <HouseTile propertyName="Gershwin College" tileId={26} colorGroup="red" footerPrice="$240" player_pos={player_pos} player_color={player_color}/>
+                        <HouseTile propertyName="Cardozo College" tileId={21} colorGroup="red" footerPrice="$220" player_pos={player_pos} player_color={player_color} />
+                        <ChanceTile propertyName="Chance" tileId={22}/>
+                        <HouseTile propertyName="Mount College" tileId={23} colorGroup="red" footerPrice="$220" player_pos={player_pos} player_color={player_color} />
+                        <HouseTile propertyName="Gershwin College" tileId={24} colorGroup="red" footerPrice="$240" player_pos={player_pos} player_color={player_color}/>
                         <DiningTile propertyName="Roth Cafe" tileId={25} footerPrice="$200" player_pos={player_pos} player_color={player_color}/>
-                        <HouseTile propertyName="Humanities" tileId={24} colorGroup="yellow" footerPrice="$260" player_pos={player_pos} player_color={player_color}/>
-                        <HouseTile propertyName="Staller Center" tileId={23} colorGroup="yellow" footerPrice="$260" player_pos={player_pos} player_color={player_color}/>
-                        <UtilityTile propertyName="Softheon Bikes" tileId={22} footerPrice="$150" player_pos={player_pos} player_color={player_color}/>
-                        <HouseTile propertyName="Wang Center" tileId={21} colorGroup="yellow" footerPrice="$280" player_pos={player_pos} player_color={player_color}/>
+                        <HouseTile propertyName="Humanities" tileId={26} colorGroup="yellow" footerPrice="$260" player_pos={player_pos} player_color={player_color}/>
+                        <HouseTile propertyName="Staller Center" tileId={27} colorGroup="yellow" footerPrice="$260" player_pos={player_pos} player_color={player_color}/>
+                        <UtilityTile propertyName="Softheon Bikes" tileId={28} footerPrice="$150" player_pos={player_pos} player_color={player_color}/>
+                        <HouseTile propertyName="Wang Center" tileId={29} colorGroup="yellow" footerPrice="$280" player_pos={player_pos} player_color={player_color}/>
                     </div>
                     <div className="space corner go-to-jail">
                         <GoToJailTile propertyName="Go to Jail" tileId={30} player_pos={player_pos} player_color={player_color}/>
                     </div>
                     <div className="row vertical-row right-row">
-                        <HouseTile propertyName="Island Federal Arena" tileId={39} colorGroup="green" footerPrice="$300" player_pos={player_pos} player_color={player_color}/>
-                        <HouseTile propertyName="Rec Center" tileId={38} colorGroup="green" footerPrice="$300" player_pos={player_pos} player_color={player_color}/>
-                        <ChanceTile propertyName="Community Chest" tileId={37} player_pos={player_pos} player_color={player_color}/>
-                        <HouseTile propertyName="LaValle Stadium" tileId={36} colorGroup="green" footerPrice="$320" player_pos={player_pos} player_color={player_color}/>
+                        <HouseTile propertyName="Island Federal Arena" tileId={31} colorGroup="green" footerPrice="$300" player_pos={player_pos} player_color={player_color}/>
+                        <HouseTile propertyName="Rec Center" tileId={32} colorGroup="green" footerPrice="$300" player_pos={player_pos} player_color={player_color}/>
+                        <ChanceTile propertyName="Community Chest" tileId={33} player_pos={player_pos} player_color={player_color}/>
+                        <HouseTile propertyName="LaValle Stadium" tileId={34} colorGroup="green" footerPrice="$320" player_pos={player_pos} player_color={player_color}/>
                         <DiningTile propertyName="Jasmine" tileId={35} footerPrice="$200" />
-                        <ChanceTile propertyName="Chance" tileId={34} player_pos={player_pos} player_color={player_color}/>
-                        <HouseTile propertyName="Chavez Hall" tileId={33} colorGroup="dark-blue" footerPrice="$350" player_pos={player_pos} player_color={player_color}/>
-                        <TaxTile propertyName="Tuition Fee" tileId={32} footerPrice="$100" player_pos={player_pos} player_color={player_color}/>
-                        <HouseTile propertyName="Tubman Hall" tileId={31} colorGroup="dark-blue" footerPrice="$400" player_pos={player_pos} player_color={player_color}/>
+                        <ChanceTile propertyName="Chance" tileId={36} player_pos={player_pos} player_color={player_color}/>
+                        <HouseTile propertyName="Chavez Hall" tileId={37} colorGroup="dark-blue" footerPrice="$350" player_pos={player_pos} player_color={player_color}/>
+                        <TaxTile propertyName="Tuition Fee" tileId={38} footerPrice="$100" player_pos={player_pos} player_color={player_color}/>
+                        <HouseTile propertyName="Tubman Hall" tileId={39} colorGroup="dark-blue" footerPrice="$400" player_pos={player_pos} player_color={player_color}/>
 
 
                     </div>

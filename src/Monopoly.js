@@ -8,7 +8,7 @@ import './css/Monopoly.scss';
 class Monopoly extends Component {
     constructor(props) {
         super(props);
-        // console.log(this.props.location.state);
+        console.log("State is: " + this.props.location.state);
         // console.log(this.props.location.state.userObjects);
         // console.log(this.props.location.state.userObjects[0]);
         if (typeof this.props.location.state != "undefined")
