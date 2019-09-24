@@ -6,6 +6,7 @@ import javits from "./images/javits.jpg";
 import Monopoly from "./Monopoly";
 import { Switch, Route } from 'react-router-dom';
 import Landing from "./Landing.js";
+import NewLanding from './NewLanding.js';
 
 function App() {
   //let img = require("../public/images/javits.jpg");
@@ -14,6 +15,7 @@ function App() {
       <Switch>
         <Route exact path="/" component={Landing}/>
         <Route exact path="/play" component={Monopoly} />
+        <Route exact path="/new" component={NewLanding} />
       </Switch>
     </div>
   );

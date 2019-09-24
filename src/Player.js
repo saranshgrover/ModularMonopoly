@@ -1,5 +1,7 @@
 export default class Player {
-    constructor() {
+
+    constructor(params) {
+        Object.assign(this,params);
         this.balance = 1500;
         this.currentPosition = 0;
         this.properties = [];

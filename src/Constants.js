@@ -1,3 +1,6 @@
+const Constants = {
+    MaxPlayer: 4,
+}
 const Color = {
     Brown: "#955436",
     LightBlue: "#AAE0FA",
@@ -102,3 +105,5 @@ const BuildingPrices = {
     ID_12: [0, 4, 10],
     ID_22: [0, 4, 10],
 }
+
+export { Constants };
