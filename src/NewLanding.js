@@ -24,7 +24,7 @@ class NewLanding extends Component {
         if(NewPlayer<=Constants.MaxPlayer) {
             this.setState({
                 NumPlayer: NewPlayer,
-                PlayerNames: this.state.PlayerNames.push("Anonymous" + {NewPlayer}),
+                PlayerNames: this.state.PlayerNames.push("Anonymous " + NewPlayer),
                 PlayerColors: this.state.PlayerColors.push("#000000")
             });
         }
@@ -32,13 +32,17 @@ class NewLanding extends Component {
     /* Callback to update the values of a player passed along by the PlayerForm Component */
     /* It kind of works but it doesn't get the full name*/
     editPlayer(index, Name, Color) {
+        console.log(`Index: ${index}, Name: ${Name}, Color: ${Color}`);
         if(index < this.state.PlayerNames.length && index < this.state.PlayerNames.length) {
             if(this.state.PlayerNames[index]!=Name) {
                 let newPlayerNames = this.state.PlayerNames.slice();
                 newPlayerNames[index] = Name;
                 this.setState({
                     PlayerNames: newPlayerNames
-            })};
+                }, () => {
+                    console.log("Changed Name to:" + this.state.PlayerNames[index]);
+                });
+            }
             if(this.state.PlayerColors[index]!=Color) {
                 let newPlayerColors = this.state.PlayerColors.slice();
                 this.setState({
@@ -46,7 +50,7 @@ class NewLanding extends Component {
                 });
             }
             }
-            console.log("Changed Name to:" + this.state.PlayerNames[index]);
+            //console.log("Changed Name to:" + this.state.PlayerNames[index]);
         }
     render() {
         let items = [];
