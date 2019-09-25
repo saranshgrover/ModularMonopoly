@@ -66,6 +66,7 @@ class NewLanding extends Component {
             }
             if(this.state.PlayerColors[index]!=Color) {
                 let newPlayerColors = this.state.PlayerColors.slice();
+                newPlayerColors[index] = Color;
                 this.setState({
                     PlayerColors: newPlayerColors
                 });
@@ -112,7 +113,7 @@ class NewLanding extends Component {
                     houseCount: 0,
                     hotelCount: 0,
                     hasRolled: false,
-                }))
+                }));
             }
             this.setState({
                 PlayerObjects: playerObjects,
