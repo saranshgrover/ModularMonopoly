@@ -2,7 +2,7 @@ export default class Player {
 
     constructor(params) {
         Object.assign(this,params);
-        this.balance = 1500;
+        /*this.balance = 1500;
         this.currentPosition = 0;
         this.properties = [];
         this.isTurn = false;
@@ -10,10 +10,9 @@ export default class Player {
         this.getOutOfJailAmount = 0;
         this.houseCount = 0;
         this.hotelCount = 0;
-        this.hasRolled = false;
-        this.currentPosition = 0;
+        this.hasRolled = false;*/
     }
-    getName() {
+   /* getName() {
         return this.name;
     }
 
@@ -85,6 +84,6 @@ export default class Player {
     }
     setCurrentPosition(newPos) {
         this.currentPosition = newPos;
-    }
+    }*/
 
 }

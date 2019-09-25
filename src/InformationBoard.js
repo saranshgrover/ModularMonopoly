@@ -16,20 +16,20 @@ class InformationBoard extends Component {
         console.log(userObjects);
         const items = []
         for(const [index,value] of userObjects.entries()) {
-            let bgStyle = {backgroundColor: value.getPieceName()};
+            let bgStyle = {backgroundColor: value.color};
             items.push(
             <div className="information_board_player" style={bgStyle}>
                 <div className="player_name">
-                    {value.getName()} <span> </span> <br></br>
+                    {value.name} <span> </span> <br></br>
                     <span><FontAwesomeIcon icon={faPuzzlePiece}/> </span>
-                    <span class="InformationBoard-PieceName">{value.getPieceName()}</span>
+                    <span class="InformationBoard-PieceName">{value.color}</span>
                 </div>
                 <div className="player_bank">
-                    <span>DD ${value.getBalance()} </span>
+                    <span>DD ${value.balance} </span>
                     <FontAwesomeIcon icon={faHouseDamage}/>
-                    <span> {value.getHouseCount()} </span>
+                    <span> {value.houseCount} </span>
                     <FontAwesomeIcon icon={faHotel}/>
-                    <span> {value.getHotelCount()}</span>
+                    <span> {value.hotelCount}</span>
                     <hr></hr>
                 </div>
                 <div className="player_position">
@@ -43,7 +43,7 @@ class InformationBoard extends Component {
                     {items}
                 </div>
                 <div className="InformationBoard-dieRoll">
-                    <h2>{`${this.props.currentPlayer.getName()}'s turn!`}</h2>
+                    <h2>{`${this.props.currentPlayer.name}'s turn!`}</h2>
                     <ReactDice
                     numDice={2}
                     rollDone={this.rollDoneCallback}
@@ -61,7 +61,7 @@ class InformationBoard extends Component {
         this.props.rollDice(num);
       }
     rollAll() {
-        this.props.currentPlayer.setRolled(true);
+        this.props.currentPlayer.hasRolled =(true);
         this.reactDice.rollAll();
     }
 }

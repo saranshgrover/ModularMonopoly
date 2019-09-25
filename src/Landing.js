@@ -33,29 +33,29 @@ class Landing extends Component {
         if(this.state.name1!=='' && this.state.piece1!=='') {
             numPlayers+=1;
             let player1 = new Player();
-            player1.setName(this.state.name1);
-            player1.setPieceName(this.state.piece1);
+            player1.name = (this.state.name1);
+            player1.color = (this.state.piece1);
             userObjects.push(player1);
         }
         if(this.state.name2!=='' && this.state.name2!=='') {
             numPlayers+=1;
             let player2 = new Player();
-            player2.setName(this.state.name2);
-            player2.setPieceName(this.state.piece2);
+            player2.name = (this.state.name2);
+            player2.color = (this.state.piece2);
             userObjects.push(player2);
         }
         if(this.state.name3!=='' && this.state.piece3!=='') {
             numPlayers+=1;
             let player3 = new Player();
-            player3.setName(this.state.name3);
-            player3.setPieceName(this.state.piece3);
+            player3.name (this.state.name3);
+            player3.color = (this.state.piece3);
             userObjects.push(player3);
         }
         if(this.state.name4!=='' && this.state.piece4!=='') {
             numPlayers+=1;
             let player4 = new Player();
-            player4.setName(this.state.name4);
-            player4.setPieceName(this.state.piece4);
+            player4.name = (this.state.name4);
+            player4.color = (this.state.piece4);
             userObjects.push(player4);
         }
         if(numPlayers>0) {

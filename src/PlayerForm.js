@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 import "./css/PlayerForm.scss";
 import Form from 'muicss/lib/react/form';
 import Input from 'muicss/lib/react/input';
-import Button from 'muicss/lib/react/button';
-import Textarea from 'muicss/lib/react/textarea';
-
 
 class PlayerForm extends Component {
     constructor(props) {
