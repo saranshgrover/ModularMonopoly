@@ -13,7 +13,8 @@ class Monopoly extends Component {
                     readyToPlay: true,
                     userObjects: this.props.location.state.userObjects,
                     currentPlayerTurn: this.props.location.state.userObjects[0],
-                    turnCount: 0
+                    turnCount: 0,
+                    landedOnProperty: false
                 };
             else 
                 this.state = {
@@ -32,7 +33,7 @@ class Monopoly extends Component {
         let indexOfPlayer = this.state.userObjects.indexOf(currentPlayerTurn);
         let numPlayers = this.state.userObjects.length;
         let nextPlayerIndex = null;
-        if (indexOfPlayer == numPlayers - 1)
+        if (indexOfPlayer === numPlayers - 1)
             nextPlayerIndex = 0;
         else  
             nextPlayerIndex = indexOfPlayer + 1;
@@ -44,17 +45,19 @@ class Monopoly extends Component {
     rollDice(amountRolled) {
         let currentPlayerTurn = this.state.currentPlayerTurn;
         let indexOfPlayer = this.state.userObjects.indexOf(currentPlayerTurn);
-        var stateCopy = Object.assign({},this.state);
+        let userObjects = this.state.userObjects;
         let newPos = currentPlayerTurn.currentPosition + amountRolled;
         if(newPos>39) {
             currentPlayerTurn.balance +=(200);
             newPos-=39;
         }
-        stateCopy.userObjects[indexOfPlayer].currentPosition =(newPos);
-        stateCopy.userObjects[indexOfPlayer].hasRolled =(false);
-        this.setState(stateCopy);
+        userObjects[indexOfPlayer].currentPosition =(newPos);
+        userObjects[indexOfPlayer].hasRolled = (true);
+        this.setState({
+            userObjects: userObjects,
+            landedOnProperty: true
+        });
         console.log(this.state.userObjects);
-        this.executeTurn(indexOfPlayer);
     }
     executeTurn(indexOfPlayer) {
 
@@ -63,10 +66,10 @@ class Monopoly extends Component {
     render() {
         return (
             <div className="Monopoly">
-                {this.state.readyToPlay == false 
+                {this.state.readyToPlay === false 
                 ? <Redirect to='/new' /> 
                 : <div>
-                    <GameBoard currentPlayer={this.state.currentPlayerTurn} />
+                    <GameBoard currentPlayer={this.state.currentPlayerTurn} landedOnProperty={this.state.landedOnProperty} />
                     <InformationBoard userObjects={this.state.userObjects} rollDice={this.rollDice} currentPlayer={this.state.currentPlayerTurn} />
                   </div> }
             </div>

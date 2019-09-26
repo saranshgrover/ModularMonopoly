@@ -106,4 +106,4 @@ const BuildingPrices = {
     ID_22: [0, 4, 10],
 }
 
-export { Constants };
+export { Constants, BuildingPrices };

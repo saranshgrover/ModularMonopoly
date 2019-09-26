@@ -40,17 +40,20 @@ class GameBoard extends Component {
                             <div class="deck"></div>
                         </div>
                     </div>
+
+                    {this.props.landedOnProperty && <CardPopUp id={this.props.currentPlayer.currentPosition} /> }
+
                     <GoTile propertyName="SAC Loop" tileId={0} tileInstruction="Collect $200 as you pass go" player_pos={player_pos} player_color={player_color}/>
                     <div className="row horizontal-row bottom-row">
-                    <HouseTile propertyName="Melville Library" tileId={9} colorGroup="light-blue" footerPrice="$120" player_pos={player_pos} player_color={player_color} />  
-                    <HouseTile propertyName="Frey Hall" tileId={8} colorGroup="light-blue" footerPrice="$100" player_pos={player_pos} player_color={player_color} />
-                    <ChanceTile propertyName="Chance" tileId={7} player_pos={player_pos} player_color={player_color}/>
-                    <HouseTile propertyName="Harriman Hall" tileId={6} colorGroup="light-blue"  footerPrice="$100" player_pos={player_pos} player_color={player_color} />
-                    <DiningTile propertyName="East Side Dining" tileId={5} footerPrice="$200" />
-                    <TaxTile propertyName="Housing Fee" tileId={4} footerPrice="$200" player_pos={player_pos} player_color={player_color}/>
-                    <HouseTile propertyName="Javits Center" tileId={3} colorGroup="dark-purple"  footerPrice="$60" player_pos={player_pos} player_color={player_color} />
-                    <ChanceTile propertyName="Community Chest" tileId={2} player_pos={player_pos} player_color={player_color}/>
-                    <HouseTile propertyName="Earth & Space Sciences" tileId={1} colorGroup="dark-purple" footerPrice="$60" player_pos={player_pos} player_color={player_color} />
+                        <HouseTile propertyName="Melville Library" tileId={9} colorGroup="light-blue" footerPrice="$120" player_pos={player_pos} player_color={player_color} />  
+                        <HouseTile propertyName="Frey Hall" tileId={8} colorGroup="light-blue" footerPrice="$100" player_pos={player_pos} player_color={player_color} />
+                        <ChanceTile propertyName="Chance" tileId={7} player_pos={player_pos} player_color={player_color}/>
+                        <HouseTile propertyName="Harriman Hall" tileId={6} colorGroup="light-blue"  footerPrice="$100" player_pos={player_pos} player_color={player_color} />
+                        <DiningTile propertyName="East Side Dining" tileId={5} footerPrice="$200" />
+                        <TaxTile propertyName="Housing Fee" tileId={4} footerPrice="$200" player_pos={player_pos} player_color={player_color}/>
+                        <HouseTile propertyName="Javits Center" tileId={3} colorGroup="dark-purple"  footerPrice="$60" player_pos={player_pos} player_color={player_color} />
+                        <ChanceTile propertyName="Community Chest" tileId={2} player_pos={player_pos} player_color={player_color}/>
+                        <HouseTile propertyName="Earth & Space Sciences" tileId={1} colorGroup="dark-purple" footerPrice="$60" player_pos={player_pos} player_color={player_color} />
                     </div>
                     <JailTile propertyName="Jail" tileId={10} player_pos={player_pos} player_color={player_color}/>
                     <div className="row vertical-row left-row">

@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import './css/CardPopUp.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPuzzlePiece, faHotel, faHouseDamage } from '@fortawesome/free-solid-svg-icons'
+import { faPuzzlePiece, faHotel, faHouseDamage } from '@fortawesome/free-solid-svg-icons';
+import { BuildingPrices } from './Constants';
 class CardPopUp extends Component {
     constructor(props) {
         super();
@@ -20,8 +21,8 @@ class CardPopUp extends Component {
             cardType = "Community"
         if (property.includes(this.props.id))
             cardType = "Property"
-
-        if(cardType=="Chance") {
+        console.log(`Id: ${this.props.id}. Card type: ${cardType}`);
+        if(cardType === "Chance") {
             return (
                 <div className="CardPopUp_Chance">
                     <div className="Chance_Community_Text">
@@ -31,7 +32,7 @@ class CardPopUp extends Component {
                 </div>
             );
         }
-        else if (cardType=="Community") {
+        else if (cardType === "Community") {
             return (
                 <div className="CardPopUp_Community">
                     <div className="Chance_Community_Text">
@@ -41,7 +42,8 @@ class CardPopUp extends Component {
                 </div>
             );
         }
-        else if (cardType=="Property") {
+        else if (cardType === "Property") {
+            let prices = BuildingPrices["ID_" + this.props.id];
             return (
                 <div className="CardPopUp_Property">
                     <div className="Property_Header" style={this.props.color}>
@@ -49,22 +51,24 @@ class CardPopUp extends Component {
                     </div>
                     <div className="Property_Price">
                         {/* big text centered */}
-                        <p>{"Rent " + this.props.BuildingPrices[1]}</p>
-                        <p>{"With 1 House $" + this.props.BuildingPrices[2]}</p>
-                        <p>{"With 2 Houses $" + this.props.BuildingPrices[3]}</p>
-                        <p>{"With 3 Houses $" + this.props.BuildingPrices[4]}</p>
-                        <p>{"With 4 Houses $" + this.props.BuildingPrices[5]}</p>
-                        <p>{"With Hotel $" + this.props.BuildingPrices[6]}</p>
-                        <p>{"Morgage Value $" + this.props.BuildingPrices[7]}</p>
-                        <p>{"Houses cost $" + this.props.BuildingPrices[8] + " each"}</p>
-                        <p>{"Hotels, $" + this.props.BuildingPrices[8] + " plus 4 houses"}</p>
+                        <p>{"Rent " + prices[1]}</p>
+                        <p>{"With 1 House $" + prices[2]}</p>
+                        <p>{"With 2 Houses $" + prices[3]}</p>
+                        <p>{"With 3 Houses $" + prices[4]}</p>
+                        <p>{"With 4 Houses $" + prices[5]}</p>
+                        <p>{"With Hotel $" + prices[6]}</p>
+                        <p>{"Morgage Value $" + prices[7]}</p>
+                        <p>{"Houses cost $" + prices[8] + " each"}</p>
+                        <p>{"Hotels, $" + prices[8] + " plus 4 houses"}</p>
                     </div>
                     <div className="Property_Bottom_Text">
-                        <p>{"If a player owns ALL the Lots of any Color-Group, the rent is Doubled on unimproved Lots in that group."}</p>
+                        <p>If a player owns ALL the Lots of any Color-Group, the rent is Doubled on unimproved Lots in that group.</p>
+                        <button>Purchase</button>
                     </div> 
                 </div>
             );
         }
+
     }
 }
 
